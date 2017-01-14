@@ -12,7 +12,22 @@
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
     <!-- TODO: Setup a template for each row of the Author Stats section of this page: -->
 
+    <script id="blogstats-template" type="text/x-handlebars-template">
+      <article class="clearfix" data-stats="{{blogstats}}" data-category="{{category}}">
+        <header>s
+          <h1>{{titlte}}</title>
+          <section class="blogstats-body">{{{body}}}
+            <dt><dd class="articles">{{totalArticles}}<dd></dt>
+            <dt><dd class="words">{{totalWords}}<dd></dt>
+
+
+
+          </section>
+        </header>
+      </article>
+    </script>
   </head>
+
   <body>
     <header class="site-header clearfix">
       <section class="heading-group-h1 pull-left">
@@ -53,7 +68,7 @@
     <script>
       // TODO: After we fetch and load all the articles, what view function do we want to run next?
       // Let's pass in a callback function, to determine what happens AFTER all articles are loaded.
-
+      Article.fetchAll(articleView.initAdminPage);
     </script>
   </body>
 </html>
