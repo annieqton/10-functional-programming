@@ -13,18 +13,15 @@
     <!-- TODO: Setup a template for each row of the Author Stats section of this page: -->
 
     <script id="blogstats-template" type="text/x-handlebars-template">
-      <article class="clearfix" data-stats="{{blogstats}}" data-category="{{category}}">
-        <header>s
-          <h1>{{titlte}}</title>
-          <section class="blogstats-body">{{{body}}}
-            <dt><dd class="articles">{{totalArticles}}<dd></dt>
-            <dt><dd class="words">{{totalWords}}<dd></dt>
-
-
-
-          </section>
-        </header>
-      </article>
+      <h1>Blog Stats</h1>
+      <section id="blog-stats">
+        <dt>Total articles:<dd class="articles">{{article}}</dt></dd>
+        <dt>Total words:<dd class="words">{{numWordsAll}}</dt></dd>
+        <h2>Author Stats</h2>
+        <p><em>{{author}} was writing {{articles}} articles using {{numWordsByAuthor}} words.</em></p>
+        <ul class="author-stats">
+        </ul>
+      </section>
     </script>
   </head>
 
@@ -48,7 +45,7 @@
     <main class="clearfix">
       <h1>Blog Stats</h1>
       <section id="blog-stats">
-        <dt>Total articles:</dt> <dd class="articles"></dd>
+        <dt>Total articles:</dt><dd class="articles"></dd>
         <dt>Total words:</dt> <dd class="words"></dd>
         <h2>Author Stats</h2>
         <p><em>Details on who is writing, and how much writing they are doing...</em></p>
@@ -63,10 +60,11 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="/vendor/scripts/handlebars.js"></script>
+      <script src="/vendor/scripts/marked.js"></script>
     <script src="/scripts/article.js"></script>
     <script src="/scripts/articleView.js"></script>
     <script>
-      // TODO: After we fetch and load all the articles, what view function do we want to run next?
+      // DONE: After we fetch and load all the articles, what view function do we want to run next?
       // Let's pass in a callback function, to determine what happens AFTER all articles are loaded.
       Article.fetchAll(articleView.initAdminPage);
     </script>
