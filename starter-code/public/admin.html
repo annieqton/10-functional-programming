@@ -13,15 +13,11 @@
     <!-- TODO: Setup a template for each row of the Author Stats section of this page: -->
 
     <script id="blogstats-template" type="text/x-handlebars-template">
-      <h1>Blog Stats</h1>
-      <section id="blog-stats">
-        <dt>Total articles:<dd class="articles">{{article}}</dt></dd>
-        <dt>Total words:<dd class="words">{{numWordsAll}}</dt></dd>
-        <h2>Author Stats</h2>
-        <p><em>{{author}} was writing {{articles}} articles using {{numWordsByAuthor}} words.</em></p>
-        <ul class="author-stats">
-        </ul>
-      </section>
+    <section id="blog-stats">
+      <p>Author: "{{name}}" Total Words: {{numWordsAll}}</p>
+      <ul class="author-stats">
+        <li>"{{name}}" wrote {{numWordsByAuthor}} words</li>
+      </ul>
     </script>
   </head>
 
@@ -48,7 +44,7 @@
         <dt>Total articles:</dt><dd class="articles"></dd>
         <dt>Total words:</dt> <dd class="words"></dd>
         <h2>Author Stats</h2>
-        <p><em>Details on who is writing, and how much writing they are doing...</em></p>
+        <p><em></em></p>
         <ul class="author-stats">
           <!-- TODO: Use a handlebars template to fill in some stats for each author -->
         </ul>
