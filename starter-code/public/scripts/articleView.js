@@ -110,7 +110,7 @@
 
   articleView.initAdminPage = function() {
     // DONE: Call the Handlebars `.compile` function, which will return a function for you to use where needed.
-    var blogTemplate = Handlebars.compile($('#blogstats-template').toHtml());
+    var blogTemplate = Handlebars.compile($('#blogstats-template').html());
 
     // REVIEW: We use `forEach` here because we are relying on the side-effects of the callback function:
     // appending to the DOM.
@@ -123,4 +123,4 @@
   };
 
   module.articleView = articleView;
-})(window); // to call globallly
+})(window);
